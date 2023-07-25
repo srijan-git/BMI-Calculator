@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		D22900822A6C154100CC24CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22900812A6C154100CC24CC /* AppDelegate.swift */; };
 		D22900842A6C154100CC24CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22900832A6C154100CC24CC /* SceneDelegate.swift */; };
-		D22900862A6C154100CC24CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22900852A6C154100CC24CC /* ViewController.swift */; };
+		D22900862A6C154100CC24CC /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22900852A6C154100CC24CC /* CalculateViewController.swift */; };
 		D22900892A6C154100CC24CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22900872A6C154100CC24CC /* Main.storyboard */; };
 		D229008B2A6C154400CC24CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D229008A2A6C154400CC24CC /* Assets.xcassets */; };
 		D229008E2A6C154400CC24CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D229008C2A6C154400CC24CC /* LaunchScreen.storyboard */; };
+		D22900982A6C17BE00CC24CC /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22900972A6C17BE00CC24CC /* ResultViewController.swift */; };
+		D229009B2A6C1F0D00CC24CC /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D229009A2A6C1F0D00CC24CC /* CalculatorBrain.swift */; };
+		D229009D2A6C24E200CC24CC /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D229009C2A6C24E200CC24CC /* BMI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D229007E2A6C154100CC24CC /* BMI Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D22900812A6C154100CC24CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D22900832A6C154100CC24CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D22900852A6C154100CC24CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D22900852A6C154100CC24CC /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
 		D22900882A6C154100CC24CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D229008A2A6C154400CC24CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D229008D2A6C154400CC24CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D229008F2A6C154400CC24CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D22900972A6C17BE00CC24CC /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = SOURCE_ROOT; };
+		D229009A2A6C1F0D00CC24CC /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		D229009C2A6C24E200CC24CC /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
+		D26F4FFB2A7029D3008A985A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +47,7 @@
 		D22900752A6C154100CC24CC = {
 			isa = PBXGroup;
 			children = (
+				D26F4FFB2A7029D3008A985A /* README.md */,
 				D22900802A6C154100CC24CC /* BMI Calculator */,
 				D229007F2A6C154100CC24CC /* Products */,
 			);
@@ -58,13 +66,40 @@
 			children = (
 				D22900812A6C154100CC24CC /* AppDelegate.swift */,
 				D22900832A6C154100CC24CC /* SceneDelegate.swift */,
-				D22900852A6C154100CC24CC /* ViewController.swift */,
-				D22900872A6C154100CC24CC /* Main.storyboard */,
+				D22900992A6C1EF000CC24CC /* Model */,
+				D22900952A6C154C00CC24CC /* Controller */,
+				D22900962A6C155400CC24CC /* View */,
 				D229008A2A6C154400CC24CC /* Assets.xcassets */,
 				D229008C2A6C154400CC24CC /* LaunchScreen.storyboard */,
 				D229008F2A6C154400CC24CC /* Info.plist */,
 			);
 			path = "BMI Calculator";
+			sourceTree = "<group>";
+		};
+		D22900952A6C154C00CC24CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D22900972A6C17BE00CC24CC /* ResultViewController.swift */,
+				D22900852A6C154100CC24CC /* CalculateViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D22900962A6C155400CC24CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D22900872A6C154100CC24CC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D22900992A6C1EF000CC24CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D229009A2A6C1F0D00CC24CC /* CalculatorBrain.swift */,
+				D229009C2A6C24E200CC24CC /* BMI.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D22900862A6C154100CC24CC /* ViewController.swift in Sources */,
+				D22900862A6C154100CC24CC /* CalculateViewController.swift in Sources */,
 				D22900822A6C154100CC24CC /* AppDelegate.swift in Sources */,
 				D22900842A6C154100CC24CC /* SceneDelegate.swift in Sources */,
+				D229009B2A6C1F0D00CC24CC /* CalculatorBrain.swift in Sources */,
+				D229009D2A6C24E200CC24CC /* BMI.swift in Sources */,
+				D22900982A6C17BE00CC24CC /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +333,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +362,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
